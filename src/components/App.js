@@ -8,17 +8,17 @@ import Pile from "./piles";
 
 const App = () => {
         return(
-            <Grid container spacing={0}>
-                    <Grid item xs={2}/>
+            <Grid container spacing={1}>
+                    <Grid item xs={2} style={{border: '1px solid'}}/>
                     <Grid item xs={10}>
                             <Grid container spacing={1}>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={6} style={{border: '1px solid'}}>
                                            <BotPanel/>
                                     </Grid>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={6} style={{border: '1px solid'}}>
                                             <BotPanel/>
                                     </Grid>
-                                    <Grid item xs={12} container justify={"space-evenly"} alignItems={"center"}>
+                                    <Grid item xs={12} container justify={"space-evenly"} alignItems={"center"} style={{border: '1px solid'}}>
                                             <Grid item xs={12}  container spacing={0} justify={"space-evenly"} alignItems={"center"}>
                                                     {[0,1,2,3,4,5,6,7].map(value => (
                                                         <Grid key={value} item xs={1}>
@@ -34,10 +34,10 @@ const App = () => {
                                                     ))}
                                             </Grid>
                                     </Grid>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={6} style={{border: '1px solid'}}>
                                             <PlayerPanel/>
                                     </Grid>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={6} style={{border: '1px solid'}}>
                                             <BotPanel/>
                                     </Grid>
                             </Grid>
