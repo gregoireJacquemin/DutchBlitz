@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974563b0-096c-480a-9b0b-a7e5c9b8b459" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/botPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/piles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/playerPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/botPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/botPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/piles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/piles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playerPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playerPanel.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +84,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565259660916</updated>
-      <workItem from="1565259662472" duration="14915000" />
+      <workItem from="1565259662472" duration="15304000" />
+      <workItem from="1565334291787" duration="7014000" />
     </task>
     <servers />
   </component>
@@ -104,7 +97,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

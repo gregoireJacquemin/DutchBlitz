@@ -8,7 +8,7 @@ const Item = () => (
     style={{
         backgroundColor: '#d0c3ce',
         width: '100%',
-        height: '100%',
+        height: '70px',
         border: '1px solid',
         borderColor: '#ff0000'
     }}>
