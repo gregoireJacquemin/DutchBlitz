@@ -1,10 +1,11 @@
 import React from 'react';
-import Item from './item';
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import BotPanel from "./botPanel";
 import PlayerPanel from "./playerPanel";
-import Pile from "./piles";
+import Pile from "./pile";
+import Deal from '../containers/deal'
+import { card0 } from "./card";
 
 const App = () => {
         return(
@@ -22,15 +23,7 @@ const App = () => {
                                    </Button>
                            </Grid>
                             <Grid item xs={12}>
-                                    <Button style={{
-                                            backgroundColor: '#d0c3ce',
-                                            width: '100%',
-                                            height: '140px',
-                                            border: '1px solid',
-                                            borderColor: '#ff0000'
-                                    }}>
-                                            Deal cards
-                                    </Button>
+                                    <Deal/>
                             </Grid>
                             <Grid item xs={12}>
                                     <Button style={{
@@ -56,14 +49,14 @@ const App = () => {
                                             <Grid item xs={12}  container spacing={0} justify={"space-evenly"} alignItems={"center"}>
                                                     {[0,1,2,3,4,5,6,7].map(value => (
                                                         <Grid key={value} item xs={1}>
-                                                                <Pile/>
+                                                                <Pile card={card0}/>
                                                         </Grid>
                                                     ))}
                                             </Grid>
                                             <Grid item xs={12}  container spacing={0} justify={"space-evenly"} alignItems={"center"}>
                                                     {[0,1,2,3,4,5,6,7].map(value => (
                                                         <Grid key={value} item xs={1}>
-                                                                <Pile/>
+                                                                <Pile card={card0}/>
                                                         </Grid>
                                                     ))}
                                             </Grid>

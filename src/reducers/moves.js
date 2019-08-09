@@ -1,5 +1,8 @@
+import {Card} from "../components/card";
+import {card0} from "../components/card"
+
 const initState = {
-    dutchPiles: [],
+    dutchPiles: [card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0],
 
     playing: false,
 
@@ -8,7 +11,7 @@ const initState = {
         blitzPile: [],
         leftPostPile: [],
         middlePostPile: [],
-        rightPostPile: [],
+        rightPostPile: [card0],
         woodPile: [],
         hand: []
     },
@@ -42,5 +45,50 @@ const initState = {
 }
 
 const moves = (state = initState, action) => {
-
+    switch(action.type) {
+        case 'DEAL':
+            const deckOriginal = buildDeck()
+            let deck = shuffleArray(deckOriginal)
+            let blitz = []
+            for (let i = 0; i < 10; i++) {
+                blitz.push(deck[i])
+            }
+            return {
+        ...state,
+                playerData: {
+                blitzPile: blitz,
+                    leftPostPile: [deck[10]],
+                    middlePostPile: [deck[11]],
+                    rightPostPile: [deck[12]],
+                    hand: deck.slice(13)
+            }
+        }
+        default:
+            return state
+    }
 }
+
+function buildDeck() {
+    const colors = ['#ff0000', '#0000ff', '#00ff00', '#ffff00']
+    const deck = []
+    colors.forEach((color) => {
+        let gender
+        if (color === '#00ff00' || color === '#ffff00') gender = 'female'
+        else gender = 'male'
+        for (let i = 1; i <= 10; i++) {
+            const card = new Card({color: color, value: i,gender: gender})
+            deck.push(card)
+        }
+    })
+    return deck
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array
+}
+
+export default moves

@@ -1,16 +1,17 @@
 import React from 'react';
-import Card from './card';
 import Button from "@material-ui/core/Button";
 
-const Pile = (Card) => {
+const Pile = props => {
+    const card=props.card.state
+    console.log(card)
     return(
         <Button style={{
             border: '1px solid',
             height: '100px',
-            backgroundColor: Card.color,
+            backgroundColor: card.color
         }}>
-            {Card.value}
-            {Card.gender}
+            {card.value}
+            {card.gender}
         </Button>
     )}
 

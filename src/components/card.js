@@ -1,17 +1,17 @@
 import React from 'react';
-import Paper from "@material-ui/core/Paper";
 
-class Card extends React.Component {
+export class Card extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            color: '#ff0000',
-            value: 1,
-            gender: 'male'
+            color: this.props.color,
+            value: this.props.value,
+            gender: this.props.gender
         }
     }
 
 }
 
+export const card0 = new Card({color: '#ffffff', value: '',gender: ''})
 
-    export default Card
+export default card0

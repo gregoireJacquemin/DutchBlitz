@@ -8,9 +8,8 @@ export const draw = draw => ({
     draw
 })
 
-export const deal = deal => ({
+export const deal = () => ({
     type: 'DEAL',
-    deal
 })
 
 export const pause = pause => ({
