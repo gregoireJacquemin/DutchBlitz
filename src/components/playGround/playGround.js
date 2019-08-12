@@ -6,12 +6,12 @@ import React from "react";
 
 const PlayGround = () => {
     return(
-        <Grid item xs={10} style={{height: '100%', padding: '0px'}} container spacing={1}>
-            <BotPanel/>
-            <BotPanel/>
+        <Grid item xs={10} style={{height: '100%', padding: '0px', margin: '0px'}} container spacing={1}>
+            <BotPanel nb={1}/>
+            <BotPanel nb={2}/>
             <DutchPanel/>
             <PlayerPanel/>
-            <BotPanel/>
+            <BotPanel nb={3}/>
         </Grid>
     )}
 

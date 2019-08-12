@@ -1,10 +1,11 @@
-import {Card} from "../components/playGround/pile/card";
-import {card0} from "../components/playGround/pile/card"
+import {card0} from "../containers/card"
 
 const initState = {
     dutchPiles: [card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0],
 
     playing: false,
+
+    selectedCard: [card0],
 
     playerData: {
         nbCardsInDutchPiles: 0,
@@ -45,73 +46,39 @@ const initState = {
 }
 
 const moves = (state = initState, action) => {
+    let newState = JSON.parse(JSON.stringify(state))
     switch(action.type) {
         case 'DEAL':
-            const deckOriginal = buildDeck()
-            let distribPlayer = distribution(deckOriginal)
-            let distribBot1 = distribution(deckOriginal)
-            let distribBot2 = distribution(deckOriginal)
-            let distribBot3 = distribution(deckOriginal)
-            return {
-                ...state,
-                playerData: {
-                    blitzPile: distribPlayer.blitz,
-                    leftPostPile: [distribPlayer.deck[10]],
-                    middlePostPile: [distribPlayer.deck[11]],
-                    rightPostPile: [distribPlayer.deck[12]],
-                    woodPile: [card0],
-                    hand: distribPlayer.deck.slice(13)
-                }
-            }
+            newState.playerData = changeState(newState.playerData, action.distribPlayer)
+            newState.bot1Data = changeState(newState.bot1Data, action.distribBot1)
+            newState.bot2Data = changeState(newState.bot2Data, action.distribBot2)
+            newState.bot3Data = changeState(newState.bot2Data, action.distribBot3)
+            break;
         case 'RESET':
-            return {
-                ...initState
-            }
+            newState = initState
+            break;
+        case 'SELECT':
+            newState.selectedCard = action.card
+            console.log(newState.selectedCard)
+            break;
         default:
-            return state
+            newState = initState
+            break;
     }
+    return newState
 }
 
-function buildDeck() {
-    const colors = ['#ff0000', '#0000ff', '#00ff00', '#ffff00']
-    const deck = []
-    colors.forEach((color) => {
-        let gender
-        if (color === '#00ff00' || color === '#ffff00') gender = 'f'
-        else gender = 'm'
-        for (let i = 1; i <= 10; i++) {
-            const card = new Card({color: color, value: i,gender: gender})
-            deck.push(card)
-        }
-    })
-    return deck
-}
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+function changeState(XData, distribX) {
+    XData = {
+        blitzPile: distribX.blitz,
+        leftPostPile: [distribX.deckShu[10]],
+        middlePostPile: [distribX.deckShu[11]],
+        rightPostPile: [distribX.deckShu[12]],
+        woodPile: [card0],
+        hand: distribX.deckShu.slice(13),
+        nbCardsInDutchPiles: 0
     }
-    return array
+    return XData
 }
-
-function buildBlitz(deck) {
-    let blitz = []
-    for (let i = 0; i < 10; i++) {
-        blitz.push(deck[i])
-    }
-    return blitz
-}
-
-function distribution(deckOri) {
-    let deck = shuffleArray(deckOri)
-    let blitz = buildBlitz(deck)
-    return {deck, blitz}
-}
-
-//function changeState(state) {
-//    newState = deepCopy(state)
-
-//}
 
 export default moves

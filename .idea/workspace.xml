@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974563b0-096c-480a-9b0b-a7e5c9b8b459" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/controlPanel/controlPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/playGround/dutchPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/playGround/playGround.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/playGround/playerPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/reset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botName.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/botPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/pile/card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/pile/pile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playerPanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/controlPanel/controlPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/controlPanel/controlPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/item.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/dutchPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/dutchPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/pile/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/pile/pile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/pile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/playGround.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/playGround.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/playerPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/playerPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/deal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/deal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/moves.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/moves.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +47,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/src/components/playGround" />
       <recent name="$PROJECT_DIR$/src/components/playGround/pile/botPanel" />
       <recent name="$PROJECT_DIR$/src/components/playGround/pile" />
       <recent name="$PROJECT_DIR$/src/components/controlPanel" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,7 +93,7 @@
       <updated>1565259660916</updated>
       <workItem from="1565259662472" duration="15304000" />
       <workItem from="1565334291787" duration="23528000" />
-      <workItem from="1565593501530" duration="7821000" />
+      <workItem from="1565593501530" duration="21927000" />
     </task>
     <servers />
   </component>

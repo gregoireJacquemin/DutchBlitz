@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 
 const ControlPanel = () => {
     return (
-        <Grid item xs={2} style={{border: '1px solid', height: '420px', padding: '0px'}} container spacing={0}>
+        <Grid item xs={2} style={{border: '1px solid', height: '420px', padding: '0px', margin: '0px'}} container spacing={0}>
             <Grid item xs={12}>
                 <Reset/>
             </Grid>

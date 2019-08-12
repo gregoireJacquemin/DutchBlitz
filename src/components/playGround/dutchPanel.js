@@ -1,6 +1,6 @@
 import Grid from "@material-ui/core/Grid";
-import Pile from "./pile/pile";
-import {card0} from "./pile/card";
+import Pile from "../../containers/pile";
+import {card0} from "../../containers/card";
 import React from "react";
 
 

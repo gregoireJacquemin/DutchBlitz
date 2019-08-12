@@ -1,9 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid'
-import Pile from "./pile/pile";
+import Pile from "../../containers/pile";
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types'
-import {card0} from './pile/card'
+import {card0} from '../../containers/card'
 
 const PlayerPanel = (props) => {
     return(
@@ -22,7 +21,6 @@ const PlayerPanel = (props) => {
     )}
 
 const mapStateToProps = state => {
-    console.log(state)
     return({
         state: state.playerData
     })}
