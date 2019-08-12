@@ -19,8 +19,7 @@ const Deal = (props) => {
 const mapDispatchToProps = dispatch => {
     return({
         onClick: () => {
-        dispatch(deal())
-        console.log('era')}
+        dispatch(deal())}
 })}
 
 export default connect(null, mapDispatchToProps)(Deal)

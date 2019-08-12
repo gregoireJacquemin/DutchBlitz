@@ -12,6 +12,10 @@ export const deal = () => ({
     type: 'DEAL',
 })
 
+export const reset = () => ({
+    type: 'RESET'
+})
+
 export const pause = pause => ({
     type: 'PAUSE',
     pause
