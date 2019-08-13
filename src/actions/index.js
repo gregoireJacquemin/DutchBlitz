@@ -1,12 +1,10 @@
 import {Card} from "../containers/card";
 
-export const pile = (card) => ({
+export const pile = (card, panel, name) => ({
     type: 'SELECT',
-    card
-})
-
-export const draw = () => ({
-    type: 'DRAW'
+    card,
+    panel,
+    name
 })
 
 export const deal = (distribPlayer, distribBot1, distribBot2, distribBot3) => ({
@@ -21,20 +19,26 @@ export const reset = () => ({
     type: 'RESET'
 })
 
+export const changeBot = (data, index) => ({
+    type: 'CHANGE BOT',
+    data,
+    index
+})
+
 export const pause = pause => ({
     type: 'PAUSE',
     pause
 })
 
 function buildDeck() {
-    const colors = ['#ff0000', '#0000ff', '#00ff00', '#ffff00']
+    const colors = ['#ff0000', '#008af5', '#00e200', '#e4e400']
     const deck = []
     colors.forEach((color) => {
         let gender
-        if (color === '#00ff00' || color === '#ffff00') gender = 'f'
+        if (color === colors[2] || color === colors[3]) gender = 'f'
         else gender = 'm'
         for (let i = 1; i <= 10; i++) {
-            const card = new Card({color: color, value: i,gender: gender})
+            const card = new Card(color, i, gender)
             deck.push(card)
         }
     })

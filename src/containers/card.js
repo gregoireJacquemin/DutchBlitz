@@ -1,17 +1,9 @@
-import React from 'react';
-
-export class Card extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            color: this.props.color,
-            value: this.props.value,
-            gender: this.props.gender
-        }
+export class Card {
+    constructor(color, value, gender) {
+            this.color = color
+            this.value = value
+            this.gender = gender
     }
-
 }
 
-export const card0 = new Card({color: '#ffffff', value: '',gender: ''})
-
-export default card0
+export const card0 = new Card('#ffffff', '','')

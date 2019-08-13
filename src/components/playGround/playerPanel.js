@@ -7,22 +7,22 @@ import {card0} from '../../containers/card'
 const PlayerPanel = (props) => {
     return(
         <Grid item xs={6} style={{border: '1px solid', padding: '0px', margin: '0px'}} container spacing={1}>
-            <Grid item xs={12} style={{height: '70px'}}>
+            <Grid item xs={12} style={{height: '40px'}}>
                 de
             </Grid>
             <Grid item x={12} style={{height: '200px'}} container spacing={0} justify={"space-evenly"} alignItems={"center"}>
-                <Pile card={props.state.woodPile[0]}/>
-                <Pile card={props.state.leftPostPile[0]}/>
-                <Pile card={props.state.middlePostPile[0]}/>
-                <Pile card={props.state.rightPostPile[0]}/>
-                <Pile card={props.state.blitzPile[0]}/>
+                <Pile card={props.playerData.woodPile[props.playerData.woodPile.length - 1]} panel={'player'} name={'woodPile'}/>
+                <Pile card={props.playerData.leftPostPile[props.playerData.leftPostPile.length - 1]} panel={'player'} name={'leftPostPile'}/>
+                <Pile card={props.playerData.middlePostPile[props.playerData.middlePostPile.length - 1]} panel={'player'} name={'middlePostPile'}/>
+                <Pile card={props.playerData.rightPostPile[props.playerData.rightPostPile.length - 1]} panel={'player'} name={'rightPostPile'}/>
+                <Pile card={props.playerData.blitzPile[props.playerData.blitzPile.length - 1]} panel={'player'} name={'blitzPile'}/>
             </Grid>
         </Grid>
     )}
 
 const mapStateToProps = state => {
     return({
-        state: state.playerData
+        playerData: state.playerData
     })}
 
 PlayerPanel.defaultProps = {
