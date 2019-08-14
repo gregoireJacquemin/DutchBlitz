@@ -2,8 +2,8 @@ import React from 'react';
 import BotName from './botName/botName';
 import Grid from '@material-ui/core/Grid'
 import Pile from "../../../containers/pile";
-import {card0} from "../../../containers/card";
 import {connect} from "react-redux";
+import BotMove from "./botPlay";
 
 const BotPanel = props => {
     const nb = props.nb
@@ -13,18 +13,22 @@ const BotPanel = props => {
     if (nb === 1) {
         XData = props.state.bot1Data
         data = 'bot1Data'
-        index = 0
+        index = XData.botIndex
     }
     if (nb === 2) {
         XData = props.state.bot2Data
         data = 'bot2Data'
-        index = 1
+        index = XData.botIndex
     }
     if (nb === 3) {
         XData = props.state.bot3Data
         data = 'bot3Data'
-        index = 2
+        index = XData.botIndex
     }
+
+    const time = 600/XData.bot.speed
+    if (props.state.playing) setTimeout(() => BotMove(XData, index, props.state.dutchPiles), time)
+
     return(
         <Grid item xs={6} style={{border: '1px solid', padding: '0px'}} container spacing={0}>
             <BotName data={data} index={index}/>

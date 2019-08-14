@@ -1,16 +1,16 @@
-import {card0} from "../../containers/card"
+import {card0} from "../containers/card"
 import {isClickAllowed} from "./isAllowed";
 import {isMoveAllowed} from "./isAllowed";
-import {listBot} from "../../components/playGround/botPanel/botName/bot";
+import {listBot} from "../components/playGround/botPanel/botName/bot";
 
 const initState = {
     dutchPiles: [card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0,card0],
 
-    playing: false,
-
     selectedCard: card0,
 
     selectedPile: '',
+
+    playing: false,
 
     playerData: {
         name: '',
@@ -24,6 +24,7 @@ const initState = {
     },
     bot1Data: {
         bot: listBot[0],
+        botIndex: 0,
         nbCardsInDutchPiles: 0,
         blitzPile: [card0],
         leftPostPile: [card0],
@@ -34,6 +35,7 @@ const initState = {
     },
     bot2Data: {
         bot: listBot[1],
+        botIndex: 1,
         nbCardsInDutchPiles: 0,
         blitzPile: [card0],
         leftPostPile: [card0],
@@ -44,6 +46,7 @@ const initState = {
     },
     bot3Data: {
         bot: listBot[2],
+        botIndex: 2,
         nbCardsInDutchPiles: 0,
         blitzPile: [card0],
         leftPostPile: [card0],
@@ -58,14 +61,17 @@ const moves = (state = initState, action) => {
     let newState = JSON.parse(JSON.stringify(state))
     switch(action.type) {
         case 'DEAL':
-            newState.playerData = changeState(newState.playerData, action.distribPlayer)
-            newState.bot1Data = changeState(newState.bot1Data, action.distribBot1)
-            newState.bot2Data = changeState(newState.bot2Data, action.distribBot2)
-            newState.bot3Data = changeState(newState.bot2Data, action.distribBot3)
+            newState.playerData = changeStatePlayer(newState.playerData, action.distribPlayer, state.playerData.name)
+            newState.bot1Data = changeStateBot(newState.bot1Data, action.distribBot1, state.bot1Data)
+            newState.bot2Data = changeStateBot(newState.bot2Data, action.distribBot2, state.bot2Data)
+            newState.bot3Data = changeStateBot(newState.bot2Data, action.distribBot3, state.bot3Data)
             newState.dutchPiles = initState.dutchPiles
             break;
         case 'RESET':
             newState = initState
+            break;
+        case 'PAUSE':
+            newState.playing = !state.playing
             break;
         case 'SELECT':
             if (state.selectedCard.value === card0.value && state.selectedPile === '') {
@@ -74,7 +80,8 @@ const moves = (state = initState, action) => {
                     newState.selectedPile = action.name
                 }
             } else {
-                switch(isMoveAllowed(action, state.selectedCard, state.selectedPile)) {
+                const moveNumber = isMoveAllowed({action: action, card: state.selectedCard, pile: state.selectedPile});
+                switch(moveNumber) {
                     case '1':
                         newState.playerData.nbCardsInDutchPiles ++
                         newState.playerData[state.selectedPile].pop()
@@ -108,8 +115,14 @@ const moves = (state = initState, action) => {
             }
             break;
         case 'CHANGE BOT':
-            if (action.index !== 6) newState[action.data].bot = listBot[action.index + 1]
-            else newState[action.data].bot = listBot[0]
+            if (action.index !== 6) {
+                newState[action.data].bot = listBot[action.index + 1]
+                newState[action.data].botIndex ++
+            }
+            else {
+                newState[action.data].bot = listBot[0]
+                newState[action.data].botIndex = 0
+            }
             break;
         default:
             break;
@@ -117,8 +130,24 @@ const moves = (state = initState, action) => {
     return newState
 }
 
-function changeState(XData, distribX) {
+function changeStatePlayer(XData, distribX, name) {
     XData = {
+        name: name,
+        blitzPile: distribX.blitz,
+        leftPostPile: [card0, distribX.deckShu[10]],
+        middlePostPile: [card0, distribX.deckShu[11]],
+        rightPostPile: [card0, distribX.deckShu[12]],
+        woodPile: [card0],
+        hand: distribX.deckShu.slice(13),
+        nbCardsInDutchPiles: 0
+    }
+    return XData
+}
+
+function changeStateBot(XData, distribX, botData) {
+    XData = {
+        bot: botData.bot,
+        botIndex: botData.botIndex,
         blitzPile: distribX.blitz,
         leftPostPile: [card0, distribX.deckShu[10]],
         middlePostPile: [card0, distribX.deckShu[11]],

@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from "@material-ui/core/Button";
 import { connect } from 'react-redux';
-import { deal } from '../actions';
+import { pause } from '../actions';
 
-const Deal = (props) => {
+const Pause = (props) => {
     return(
         <Button onClick={props.onClick}
                 style={{
@@ -12,16 +12,15 @@ const Deal = (props) => {
                     height: '140px',
                     border: '1px solid',
                     borderColor: '#ff0000'
-        }}>
-            deal
+                }}>
+            play/pause
         </Button>
-)}
+    )}
 
 const mapDispatchToProps = dispatch => {
     return({
-        onClick: (distribPlayer, distribBot1, distribBot2, distribBot3) => {
-        dispatch(deal(distribPlayer, distribBot1, distribBot2, distribBot3))}
-    })
-}
+        onClick: () => {
+            dispatch(pause())}
+    })}
 
-export default connect(null, mapDispatchToProps)(Deal)
+export default connect(null, mapDispatchToProps)(Pause)

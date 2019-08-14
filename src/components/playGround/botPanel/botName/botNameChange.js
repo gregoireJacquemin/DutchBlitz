@@ -5,7 +5,7 @@ import {changeBot} from "../../../../actions";
 
 const BotNameChange = (props) => {
     return(
-        <Button onClick={props.onClick}
+        <Button onClick={() => props.onClick(props.data, props.index)}
                 style={{
                     backgroundColor: '#d0c3ce',
                     width: '100%',

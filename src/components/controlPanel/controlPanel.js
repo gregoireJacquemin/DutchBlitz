@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid'
 import Reset from "../../containers/reset";
 import Deal from "../../containers/deal";
-import Button from "@material-ui/core/Button";
+import Pause from "../../containers/pause"
 
 const ControlPanel = () => {
     return (
@@ -14,15 +14,7 @@ const ControlPanel = () => {
                 <Deal/>
             </Grid>
             <Grid item xs={12}>
-                <Button style={{
-                backgroundColor: '#d0c3ce',
-                    width: '100%',
-                    height: '140px',
-                    border: '1px solid',
-                    borderColor: '#ff0000'
-                }}>
-                    play/pause
-                </Button>
+                <Pause/>
             </Grid>
         </Grid>
 )}

@@ -25,9 +25,8 @@ export const changeBot = (data, index) => ({
     index
 })
 
-export const pause = pause => ({
-    type: 'PAUSE',
-    pause
+export const pause = () => ({
+    type: 'PAUSE'
 })
 
 function buildDeck() {

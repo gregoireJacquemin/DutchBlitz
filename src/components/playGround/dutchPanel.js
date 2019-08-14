@@ -26,8 +26,7 @@ const DutchPanel = (props) => {
 
 const mapStateToProps = state => {
     return({
-        dutchPiles: state.dutchPiles,
-        state: state
+        dutchPiles: state.dutchPiles
     })}
 
 export default connect(mapStateToProps,null) (DutchPanel)

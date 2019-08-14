@@ -1,29 +1,25 @@
 import React from 'react'
-import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
 import {connect} from "react-redux";
 
-const piche = (props) => {
-    const BotNameDisplay = props1 => {
-        return(
-            <Paper style={{
-                backgroundColor: '#d0c3ce',
-                width: '100%',
-                height: '40px',
-                border: '1px solid',
-                borderColor: '#ff0000'
-            }}>
-                {props1.bot.name}
-            </Paper>
-        )}
+const BotNameDisplay = props => {
+    return(
+        <Button disabled style={{
+            backgroundColor: '#d0c3ce',
+            width: '100%',
+            height: '40px',
+            border: '1px solid',
+            borderColor: '#ff0000',
+            textAlign: 'center',
+            color: '#000000'
+        }}>
+            {props.state[props.data].bot.name}
+        </Button>
+    )}
 
-    const mapStateToProps = state => {
-        return({
-            bot: state[props.data].bot
-        })}
+const mapStateToProps = state => {
+    return({
+        state: state
+    })}
 
-     connect(mapStateToProps,null)(BotNameDisplay)
-
-    return <BotNameDisplay props1={props}/>
-}
-
-export default piche
+export default connect(mapStateToProps,null)(BotNameDisplay)
