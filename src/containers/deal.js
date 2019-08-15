@@ -19,8 +19,8 @@ const Deal = (props) => {
 
 const mapDispatchToProps = dispatch => {
     return({
-        onClick: (distribPlayer, distribBot1, distribBot2, distribBot3) => {
-        dispatch(deal(distribPlayer, distribBot1, distribBot2, distribBot3))}
+        onClick: () => {
+        dispatch(deal())}
     })
 }
 

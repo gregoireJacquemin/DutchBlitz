@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974563b0-096c-480a-9b0b-a7e5c9b8b459" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reducers/isAllowed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/Movement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/controlPanel/controlPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/controlPanel/controlPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botName.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botName.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameChange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameChange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameDisplay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playGround/dutchPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/dutchPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playGround/playerPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/playerPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botPlay.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/deal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/deal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botPlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/moves/isAllowed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/moves/moves.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/moves.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/pause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/pause.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/isAllowed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/isAllowed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/moves.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/moves.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +91,8 @@
       <workItem from="1565334291787" duration="23528000" />
       <workItem from="1565593501530" duration="22148000" />
       <workItem from="1565676454189" duration="25623000" />
-      <workItem from="1565762800359" duration="21305000" />
+      <workItem from="1565762800359" duration="21595000" />
+      <workItem from="1565849345583" duration="23988000" />
     </task>
     <servers />
   </component>

@@ -73,6 +73,32 @@ const moves = (state = initState, action) => {
         case 'PAUSE':
             newState.playing = !state.playing
             break;
+        case 'BOTMOVE':
+            const moveNumber = isMoveAllowed({action: action.botTry, card: action.card, pile: action.pile});
+            switch(moveNumber) {
+                case '1':
+                    newState[action.data].nbCardsInDutchPiles++
+                    newState[action.data][action.pile].pop()
+                    newState.dutchPiles[action.botTry.name] = action.card
+                    break;
+                case '2':
+                    newState[action.data][action.pile].pop()
+                    newState[action.data][action.botTry.name].push(action.card)
+                    break;
+                case '3':
+                    if (state[action.data].hand.length !== 0) {
+                        const cardsDrawn = Math.min(state[action.data].hand.length, 3)
+                        newState[action.data].woodPile = state[action.data].woodPile.concat(state[action.data].hand.slice(0, cardsDrawn))
+                        newState[action.data].hand = state[action.data].hand.slice(cardsDrawn)
+                    } else {
+                        newState[action.data].woodPile = [card0]
+                        newState[action.data].hand = state[action.data].woodPile.slice(1)
+                    }
+                    break;
+                default:
+                    break;
+            }
+            break;
         case 'SELECT':
             if (state.selectedCard.value === card0.value && state.selectedPile === '') {
                 if (isClickAllowed(action)) {

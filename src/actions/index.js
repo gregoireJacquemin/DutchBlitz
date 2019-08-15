@@ -7,7 +7,7 @@ export const pile = (card, panel, name) => ({
     name
 })
 
-export const deal = (distribPlayer, distribBot1, distribBot2, distribBot3) => ({
+export const deal = () => ({
     type: 'DEAL',
     distribPlayer: distribution(),
     distribBot1: distribution(),
@@ -25,12 +25,20 @@ export const changeBot = (data, index) => ({
     index
 })
 
+export const botMove = (botTry, card, pile, data) => ({
+    type: 'BOTMOVE',
+    botTry,
+    card,
+    pile,
+    data
+})
+
 export const pause = () => ({
     type: 'PAUSE'
 })
 
 function buildDeck() {
-    const colors = ['#ff0000', '#008af5', '#00e200', '#e4e400']
+    const colors = ['#ca0000', '#008af5', '#00e200', '#cece00']
     const deck = []
     colors.forEach((color) => {
         let gender
