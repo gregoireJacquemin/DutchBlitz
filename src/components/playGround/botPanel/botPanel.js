@@ -7,55 +7,58 @@ import Movement from "./Movement";
 import {botMove} from "../../../actions";
 
 class BotPanel extends React.Component{
+    constructor(interval){
+        super(interval);
+        this.state = {
+            interval: interval
+        };
+    }
 
     componentDidMount() {
 
         const nb = this.props.nb
         let XData
         let data
-        let index
 
 
-        const time = 600
-        const dutchPiles = this.props.state.dutchPiles
+        const time = 20
 
-        setInterval(() => {
+        this.setState({interval: setInterval(() => {
 
-            if (nb === 1) {
-                XData = this.props.state.bot1Data
-                data = 'bot1Data'
-                index = XData.botIndex
-            }
-            else if (nb === 2) {
-                XData = this.props.state.bot2Data
-                data = 'bot2Data'
-                index = XData.botIndex
-            }
-            else{
-                XData = this.props.state.bot3Data
-                data = 'bot3Data'
-                index = XData.botIndex
-            }
+                if (nb === 1) {
+                    XData = this.props.state.bot1Data
+                    data = 'bot1Data'
+                } else if (nb === 2) {
+                    XData = this.props.state.bot2Data
+                    data = 'bot2Data'
+                } else {
+                    XData = this.props.state.bot3Data
+                    data = 'bot3Data'
+                }
+                const dutchPiles = this.props.state.dutchPiles
+                const proba = XData.bot.vision
 
-            if (!this.props.state.playing) return ('')
-            else {
+                if (!this.props.state.playing) return ('')
+                else {
 
-                const listMoveFrom = [{
-                    pile: 'rightPostPile',
-                    card: XData.rightPostPile[XData.rightPostPile.length - 1]
-                },
-                    {pile: 'middlePostPile', card: XData.middlePostPile[XData.middlePostPile.length - 1]},
-                    {pile: 'leftPostPile', card: XData.leftPostPile[XData.leftPostPile.length - 1]},
-                    {pile: 'blitzPile', card: XData.blitzPile[XData.blitzPile.length - 1]},
-                    {pile: 'woodPile', card: XData.woodPile[XData.woodPile.length - 1]}]
-                console.log(XData)
-                const listMoveTo = dutchPiles.concat(XData.rightPostPile[XData.rightPostPile.length - 1], XData.middlePostPile[XData.middlePostPile.length - 1], XData.leftPostPile[XData.leftPostPile.length - 1])
+                    const listMoveFrom = [{pile: 'blitzPile', card: XData.blitzPile[XData.blitzPile.length - 1]},
+                        {pile: 'rightPostPile', card: XData.rightPostPile[XData.rightPostPile.length - 1]},
+                        {pile: 'middlePostPile', card: XData.middlePostPile[XData.middlePostPile.length - 1]},
+                        {pile: 'leftPostPile', card: XData.leftPostPile[XData.leftPostPile.length - 1]},
+                        {pile: 'woodPile', card: XData.woodPile[XData.woodPile.length - 1]}]
+                    const listMoveTo = dutchPiles.concat(XData.rightPostPile[XData.rightPostPile.length - 1], XData.middlePostPile[XData.middlePostPile.length - 1], XData.leftPostPile[XData.leftPostPile.length - 1])
 
-                const Move = Movement(listMoveFrom, listMoveTo)
-                this.props.fonc({...Move, data})
-            }
-        }, time)
+                    const Move = Movement(listMoveFrom, listMoveTo)
+                    const nbRandom = Math.floor(Math.random() * 4)
+                    if (proba >= nbRandom) this.props.fonc({...Move, data})
+                }
+            }, time)})
     }
+
+    componentWillUnmount() {
+        clearInterval(this.state.interval)
+    }
+
 
     render() {
         const nb = this.props.nb

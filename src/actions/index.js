@@ -1,4 +1,5 @@
 import {Card} from "../containers/card";
+import {card0} from '../containers/card'
 
 export const pile = (card, panel, name) => ({
     type: 'SELECT',
@@ -33,6 +34,11 @@ export const botMove = (botTry, card, pile, data) => ({
     data
 })
 
+export const changeName = (name) => ({
+    type: 'NAME',
+    name
+})
+
 export const pause = () => ({
     type: 'PAUSE'
 })
@@ -61,7 +67,7 @@ function shuffleArray(array) {
 }
 
 function buildBlitz(deck) {
-    let blitz = []
+    let blitz = [card0]
     for (let i = 0; i < 10; i++) {
         blitz.push(deck[i])
     }

@@ -24,8 +24,6 @@ const Movement = (listMoveFrom, listMoveTo) => {
             }
             card = listMoveTo[j]
             botTry = {panel: panel, name: name, card: card}
-            console.log(j)
-            console.log(isMoveAllowed({action: botTry, card: currentCard, pile: currentPile}))
             if (isMoveAllowed({action: botTry, card: currentCard, pile: currentPile}) !== '0') {
                 return({botTry, currentCard, currentPile});
             }

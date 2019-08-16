@@ -5,7 +5,6 @@ export function isClickAllowed(action) {
 }
 
  export const isMoveAllowed = (props) => {
-    console.log(props)
     if (props.action.panel === 'dutch') {
         if ((props.action.card.color === props.card.color && props.action.card.value + 1 === props.card.value) || (props.action.card.value === '' && props.card.value === 1)) return '1'
         else return '0'

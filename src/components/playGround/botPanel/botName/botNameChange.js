@@ -7,11 +7,11 @@ const BotNameChange = (props) => {
     return(
         <Button onClick={() => props.onClick(props.data, props.index)}
                 style={{
-                    backgroundColor: '#d0c3ce',
+                    backgroundColor: '#c3c3c3',
                     width: '100%',
                     height: '40px',
                     border: '1px solid',
-                    borderColor: '#ff0000'
+                    borderColor: '#000000'
                 }}>
             change
         </Button>

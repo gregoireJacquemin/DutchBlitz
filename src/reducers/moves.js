@@ -12,6 +12,8 @@ const initState = {
 
     playing: false,
 
+    blitz: false,
+
     playerData: {
         name: '',
         nbCardsInDutchPiles: 0,
@@ -64,11 +66,15 @@ const moves = (state = initState, action) => {
             newState.playerData = changeStatePlayer(newState.playerData, action.distribPlayer, state.playerData.name)
             newState.bot1Data = changeStateBot(newState.bot1Data, action.distribBot1, state.bot1Data)
             newState.bot2Data = changeStateBot(newState.bot2Data, action.distribBot2, state.bot2Data)
-            newState.bot3Data = changeStateBot(newState.bot2Data, action.distribBot3, state.bot3Data)
+            newState.bot3Data = changeStateBot(newState.bot3Data, action.distribBot3, state.bot3Data)
             newState.dutchPiles = initState.dutchPiles
             break;
         case 'RESET':
             newState = initState
+            newState.playerData.name = state.playerData.name
+            break;
+        case 'NAME':
+            newState.playerData.name = action.name
             break;
         case 'PAUSE':
             newState.playing = !state.playing
@@ -153,6 +159,10 @@ const moves = (state = initState, action) => {
         default:
             break;
     }
+    if (state.playing && (newState.playerData.blitzPile.length === 1 || newState.bot1Data.blitzPile.length === 1 || newState.bot2Data.blitzPile.length === 1 || newState.bot3Data.blitzPile.length === 1)){
+        newState.blitz = true
+        newState.playing = false
+    }
     return newState
 }
 
@@ -174,7 +184,7 @@ function changeStateBot(XData, distribX, botData) {
     XData = {
         bot: botData.bot,
         botIndex: botData.botIndex,
-        blitzPile: distribX.blitz,
+        blitzPile: [...distribX.blitz],
         leftPostPile: [card0, distribX.deckShu[10]],
         middlePostPile: [card0, distribX.deckShu[11]],
         rightPostPile: [card0, distribX.deckShu[12]],

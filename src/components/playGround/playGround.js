@@ -1,7 +1,7 @@
 import Grid from "@material-ui/core/Grid";
 import BotPanel from "./botPanel/botPanel";
 import DutchPanel from './dutchPanel'
-import PlayerPanel from "./playerPanel";
+import PlayerPanel from "./playerPanel/playerPanel";
 import React from "react";
 
 const PlayGround = () => {
