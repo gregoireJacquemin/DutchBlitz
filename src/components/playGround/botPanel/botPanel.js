@@ -1,7 +1,7 @@
 import React from 'react';
 import BotName from './botName/botName';
 import Grid from '@material-ui/core/Grid'
-import Pile from "../../../containers/pile";
+import Pile from "../../../containers/pile/pile";
 import {connect} from "react-redux";
 import Movement from "./Movement";
 import {botMove} from "../../../actions";
@@ -21,7 +21,7 @@ class BotPanel extends React.Component{
         let data
 
 
-        const time = 20
+        const time = 2000
 
         this.setState({interval: setInterval(() => {
 
@@ -48,9 +48,8 @@ class BotPanel extends React.Component{
                         {pile: 'woodPile', card: XData.woodPile[XData.woodPile.length - 1]}]
                     const listMoveTo = dutchPiles.concat(XData.rightPostPile[XData.rightPostPile.length - 1], XData.middlePostPile[XData.middlePostPile.length - 1], XData.leftPostPile[XData.leftPostPile.length - 1])
 
-                    const Move = Movement(listMoveFrom, listMoveTo)
-                    const nbRandom = Math.floor(Math.random() * 4)
-                    if (proba >= nbRandom) this.props.fonc({...Move, data})
+                    const Move = Movement(listMoveFrom, listMoveTo, proba)
+                    this.props.fonc({...Move, data})
                 }
             }, time)})
     }
@@ -65,27 +64,31 @@ class BotPanel extends React.Component{
         let XData
         let data
         let index
+        let color
 
         if (nb === 1) {
             XData = this.props.state.bot1Data
             data = 'bot1Data'
             index = XData.botIndex
+            color = '#47a8f5'
         }
         else if (nb === 2) {
             XData = this.props.state.bot2Data
             data = 'bot2Data'
             index = XData.botIndex
+            color = '#53e24d'
         }
         else{
             XData = this.props.state.bot3Data
             data = 'bot3Data'
             index = XData.botIndex
+            color = '#ca2f35'
         }
 
         return(
-            <Grid item xs={6} style={{border: '1px solid', padding: '0px'}} container spacing={0}>
-                <BotName data={data} index={index}/>
-                <Grid item x={12} style={{height: '200px'}} container spacing={0} justify={"space-evenly"} alignItems={"center"}>
+            <Grid item xs={6} style={{border: '1px solid', borderColor:'#ffffff', padding: '0px'}} container spacing={0}>
+                <BotName data={data} index={index} color={color}/>
+                <Grid item x={12} style={{height: '200px', backgroundColor: '#262626'}} container spacing={0} justify={"space-evenly"} alignItems={"center"}>
                     <Pile card={XData.woodPile[XData.woodPile.length - 1]} panel={'bot'} name={'wood'}/>
                     <Pile card={XData.leftPostPile[XData.leftPostPile.length - 1]} panel={'bot'} name={'post'}/>
                     <Pile card={XData.middlePostPile[XData.middlePostPile.length - 1]} panel={'bot'} name={'post'}/>

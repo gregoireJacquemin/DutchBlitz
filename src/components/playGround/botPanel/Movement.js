@@ -1,6 +1,6 @@
 import {isMoveAllowed} from "../../../reducers/isAllowed";
 
-const Movement = (listMoveFrom, listMoveTo) => {
+const Movement = (listMoveFrom, listMoveTo, proba) => {
 
     let currentCard
     let currentPile
@@ -25,7 +25,12 @@ const Movement = (listMoveFrom, listMoveTo) => {
             card = listMoveTo[j]
             botTry = {panel: panel, name: name, card: card}
             if (isMoveAllowed({action: botTry, card: currentCard, pile: currentPile}) !== '0') {
-                return({botTry, currentCard, currentPile});
+                const nbRandom = Math.floor(Math.random() * 4)
+                if (proba >= nbRandom) return({botTry, currentCard, currentPile})
+                else {
+                    botTry = {panel: 'player', name: 'woodPile', card: currentCard}
+                    return({botTry, currentCard, currentPile})
+                }
             }
         }
     }

@@ -1,19 +1,21 @@
 import React from 'react';
-import Button from "@material-ui/core/Button";
+import Button from "@material-ui/core/Button/index";
 import { connect } from 'react-redux';
-import { deal } from '../actions';
+import { deal } from '../../actions';
+import card from './card.svg'
 
 const Deal = (props) => {
     return(
         <Button onClick={props.onClick}
                 style={{
-                    backgroundColor: '#d0c3ce',
+                    backgroundColor: '#8cd063',
                     width: '100%',
                     height: '140px',
                     border: '1px solid',
-                    borderColor: '#ff0000'
+                    borderColor: '#000000',
+                    fontSize: '40px'
         }}>
-            deal
+            <img src={card} className="App-logo" alt="" style={{height: '80px', width: '80px'}}/>
         </Button>
 )}
 

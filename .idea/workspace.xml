@@ -2,18 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974563b0-096c-480a-9b0b-a7e5c9b8b459" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/blitz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/playGround/playerPanel/playerName.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/blitz/first.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/blitz/second.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/blitz/third.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/deal/card.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/pile/empty.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/pile/mars.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/pile/venus.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blitz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blitz/blitz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/controlPanel/controlPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/controlPanel/controlPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/Movement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/Movement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botName.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botName.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameChange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameChange.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameDisplay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/dutchPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/dutchPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/playGround/playGround.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/playGround.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playGround/playerPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/playerPanel/playerPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/isAllowed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/isAllowed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/playerPanel/playerName.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/playerPanel/playerName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playGround/playerPanel/playerPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playGround/playerPanel/playerPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/deal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/deal/deal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/pause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/pause.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/pile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/pile/pile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/reset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/reset.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/moves.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/moves.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,6 +36,58 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/blitz/blitz.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/pause.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/reducers/moves.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="154" column="17" selection-start-line="154" selection-start-column="17" selection-end-line="154" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -32,13 +99,132 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/containers/pile.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/playGround.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/dutchPanel.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/botPanel/botName/bot.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botName.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameDisplay.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameChange.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/playerPanel/playerName.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/botPanel/Movement.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/playerPanel/playerPanel.js" />
+        <option value="$PROJECT_DIR$/src/containers/reset.js" />
+        <option value="$PROJECT_DIR$/src/containers/deal.js" />
+        <option value="$PROJECT_DIR$/src/containers/mars.svg" />
+        <option value="$PROJECT_DIR$/src/containers/pile/pile.js" />
+        <option value="$PROJECT_DIR$/src/components/controlPanel/controlPanel.js" />
+        <option value="$PROJECT_DIR$/src/containers/deal/deal.js" />
+        <option value="$PROJECT_DIR$/src/components/blitz.js" />
+        <option value="$PROJECT_DIR$/src/components/blitz/first.svg" />
+        <option value="$PROJECT_DIR$/src/components/blitz/blitz.js" />
+        <option value="$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js" />
+        <option value="$PROJECT_DIR$/src/containers/pause.js" />
+        <option value="$PROJECT_DIR$/src/reducers/moves.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1440" />
+    <option name="y" value="-180" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
   <component name="ProjectId" id="1P8dStTvpHmwH5Lp5LoRnNfkOhe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="blitz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="playGround" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="playGround" type="462c0819:PsiDirectoryNode" />
+              <item name="botPanel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="deal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="pile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dutch_blitz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dutch_blitz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/pile" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -46,12 +232,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/containers/pile" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/playGround/playerPanel" />
-      <recent name="$PROJECT_DIR$/src/reducers" />
-      <recent name="$PROJECT_DIR$/src/components/playGround/botPanel/botName" />
-      <recent name="$PROJECT_DIR$/src/reducers/moves" />
-      <recent name="$PROJECT_DIR$/src/containers" />
+      <recent name="$PROJECT_DIR$/src/components/blitz" />
+      <recent name="$PROJECT_DIR$/src/components/playGround" />
+      <recent name="$PROJECT_DIR$/src/containers/deal" />
+      <recent name="$PROJECT_DIR$/src/components/controlPanel" />
+      <recent name="$PROJECT_DIR$/src/containers/pile" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -97,9 +286,36 @@
       <workItem from="1565676454189" duration="25623000" />
       <workItem from="1565762800359" duration="21595000" />
       <workItem from="1565849345583" duration="24125000" />
-      <workItem from="1565935676207" duration="18786000" />
+      <workItem from="1565935676207" duration="18976000" />
+      <workItem from="1566198346589" duration="18931000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="18931000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1440" y="-180" width="1920" height="1080" extended-state="0" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32970297" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -110,11 +326,225 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/playGround.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/dutchPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/botPanel/botName/bot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="98" lean-forward="true" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="46" column="51" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/botPanel/botName/botName.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/botPanel/botName/botNameChange.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/playerPanel/playerPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/playerPanel/playerName.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/botPanel/Movement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/reset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/pile/mars.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/pile/empty.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/controlPanel/controlPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/pile/pile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="109" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/blitz/first.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/deal/deal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="95" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/blitz/blitz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/playGround/botPanel/botPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/pause.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/moves.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="154" column="17" selection-start-line="154" selection-start-column="17" selection-end-line="154" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

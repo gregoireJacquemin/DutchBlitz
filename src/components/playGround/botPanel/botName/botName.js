@@ -4,7 +4,7 @@ import BotNameDisplay from "./botNameDisplay";
 import BotNameChange from "./botNameChange";
 
 const BotName = props => (
-    <Grid item xs={12} style={{height: '40px', padding: '0px'}} container spacing={0}>
+    <Grid item xs={12} style={{height: '40px', padding: '0px', backgroundColor: props.color}} container spacing={0}>
         <Grid item xs={4} style={{padding: '0px'}}>
             <BotNameDisplay {...props}/>
         </Grid>

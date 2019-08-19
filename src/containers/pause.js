@@ -2,20 +2,38 @@ import React from 'react';
 import Button from "@material-ui/core/Button";
 import { connect } from 'react-redux';
 import { pause } from '../actions';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import PauseIcon from '@material-ui/icons/Pause';
 
 const Pause = (props) => {
-    return(
-        <Button onClick={props.onClick}
-                style={{
-                    backgroundColor: '#d0c3ce',
-                    width: '100%',
-                    height: '140px',
-                    border: '1px solid',
-                    borderColor: '#ff0000'
-                }}>
-            play/pause
-        </Button>
-    )}
+    if(props.playing) {
+        return (
+            <Button onClick={props.onClick}
+                    style={{
+                        backgroundColor: '#d03f46',
+                        width: '100%',
+                        height: '140px',
+                        border: '1px solid',
+                        borderColor: '#000000'
+                    }}>
+                <PauseIcon style={{ fontSize: 80}}/>
+            </Button>
+        )
+    } else {
+        return(
+            <Button disabled={!props.dealt} onClick={props.onClick}
+                    style={{
+                        backgroundColor: '#d03f46',
+                        width: '100%',
+                        height: '140px',
+                        border: '1px solid',
+                        borderColor: '#000000'
+                    }}>
+                <PlayArrowIcon style={{ fontSize: 80}}/>
+            </Button>
+        )
+    }
+}
 
 const mapDispatchToProps = dispatch => {
     return({
@@ -23,4 +41,11 @@ const mapDispatchToProps = dispatch => {
             dispatch(pause())}
     })}
 
-export default connect(null, mapDispatchToProps)(Pause)
+const mapStateToProps = state => {
+    return({
+        playing: state.playing,
+        dealt: state.cardsDealt
+    })
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Pause)

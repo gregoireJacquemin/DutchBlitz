@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import ControlPanel from './controlPanel/controlPanel'
 import PlayGround from "./playGround/playGround";
 import {connect} from 'react-redux'
-import Blitz from "./blitz";
+import Blitz from "./blitz/blitz";
 
 const App = props => {
 

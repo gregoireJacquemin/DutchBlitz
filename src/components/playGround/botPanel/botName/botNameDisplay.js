@@ -5,7 +5,6 @@ import {connect} from "react-redux";
 const BotNameDisplay = props => {
     return(
         <Button disabled style={{
-            backgroundColor: '#c3c3c3',
             width: '100%',
             height: '40px',
             border: '1px solid',

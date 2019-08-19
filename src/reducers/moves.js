@@ -12,10 +12,12 @@ const initState = {
 
     playing: false,
 
+    cardsDealt: false,
+
     blitz: false,
 
     playerData: {
-        name: '',
+        name: 'player name',
         nbCardsInDutchPiles: 0,
         blitzPile: [card0],
         leftPostPile: [card0],
@@ -68,6 +70,7 @@ const moves = (state = initState, action) => {
             newState.bot2Data = changeStateBot(newState.bot2Data, action.distribBot2, state.bot2Data)
             newState.bot3Data = changeStateBot(newState.bot3Data, action.distribBot3, state.bot3Data)
             newState.dutchPiles = initState.dutchPiles
+            newState.cardsDealt = true
             break;
         case 'RESET':
             newState = initState
@@ -106,43 +109,49 @@ const moves = (state = initState, action) => {
             }
             break;
         case 'SELECT':
-            if (state.selectedCard.value === card0.value && state.selectedPile === '') {
-                if (isClickAllowed(action)) {
-                    newState.selectedCard = action.card
-                    newState.selectedPile = action.name
-                }
-            } else {
-                const moveNumber = isMoveAllowed({action: action, card: state.selectedCard, pile: state.selectedPile});
-                switch(moveNumber) {
-                    case '1':
-                        newState.playerData.nbCardsInDutchPiles ++
-                        newState.playerData[state.selectedPile].pop()
-                        newState.dutchPiles[action.name] = state.selectedCard
-                        newState.selectedCard = card0
-                        newState.selectedPile = ''
-                        break;
-                    case '2':
-                        newState.playerData[state.selectedPile].pop()
-                        newState.playerData[action.name].push(state.selectedCard)
-                        newState.selectedCard = card0
-                        newState.selectedPile = ''
-                        break;
-                    case '3':
-                        if (state.playerData.hand.length !== 0) {
-                            const cardsDrawn = Math.min(state.playerData.hand.length, 3)
-                            newState.playerData.woodPile = state.playerData.woodPile.concat(state.playerData.hand.slice(0 , cardsDrawn))
-                            newState.playerData.hand = state.playerData.hand.slice(cardsDrawn)
-                        } else {
-                            newState.playerData.woodPile = [card0]
-                            newState.playerData.hand = state.playerData.woodPile.slice(1)
-                        }
-                        newState.selectedCard = card0
-                        newState.selectedPile = ''
-                        break;
-                    default:
-                        newState.selectedCard = card0
-                        newState.selectedPile = ''
-                        break;
+            if (state.playing) {
+                if (state.selectedCard.value === card0.value && state.selectedPile === '') {
+                    if (isClickAllowed(action)) {
+                        newState.selectedCard = action.card
+                        newState.selectedPile = action.name
+                    }
+                } else {
+                    const moveNumber = isMoveAllowed({
+                        action: action,
+                        card: state.selectedCard,
+                        pile: state.selectedPile
+                    });
+                    switch (moveNumber) {
+                        case '1':
+                            newState.playerData.nbCardsInDutchPiles++
+                            newState.playerData[state.selectedPile].pop()
+                            newState.dutchPiles[action.name] = state.selectedCard
+                            newState.selectedCard = card0
+                            newState.selectedPile = ''
+                            break;
+                        case '2':
+                            newState.playerData[state.selectedPile].pop()
+                            newState.playerData[action.name].push(state.selectedCard)
+                            newState.selectedCard = card0
+                            newState.selectedPile = ''
+                            break;
+                        case '3':
+                            if (state.playerData.hand.length !== 0) {
+                                const cardsDrawn = Math.min(state.playerData.hand.length, 3)
+                                newState.playerData.woodPile = state.playerData.woodPile.concat(state.playerData.hand.slice(0, cardsDrawn))
+                                newState.playerData.hand = state.playerData.hand.slice(cardsDrawn)
+                            } else {
+                                newState.playerData.woodPile = [card0]
+                                newState.playerData.hand = state.playerData.woodPile.slice(1)
+                            }
+                            newState.selectedCard = card0
+                            newState.selectedPile = ''
+                            break;
+                        default:
+                            newState.selectedCard = card0
+                            newState.selectedPile = ''
+                            break;
+                    }
                 }
             }
             break;
@@ -159,7 +168,7 @@ const moves = (state = initState, action) => {
         default:
             break;
     }
-    if (state.playing && (newState.playerData.blitzPile.length === 1 || newState.bot1Data.blitzPile.length === 1 || newState.bot2Data.blitzPile.length === 1 || newState.bot3Data.blitzPile.length === 1)){
+    if (newState.playing && (newState.playerData.blitzPile.length === 1 || newState.bot1Data.blitzPile.length === 1 || newState.bot2Data.blitzPile.length === 1 || newState.bot3Data.blitzPile.length === 1)){
         newState.blitz = true
         newState.playing = false
     }
