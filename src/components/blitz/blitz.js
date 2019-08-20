@@ -48,10 +48,10 @@ const Blitz = props => {
                 <DialogContent>
                     <div style={{textAlign: 'center', fontSize: '120px'}}>BLITZ !</div>
                     <DialogContentText>
-                        <div style={{textAlign: 'center'}}>
+                        <div style={{textAlign: 'center', color: '#000000'}}>
                             player who blitzed : {playerBlitz}
                         </div>
-                        <div style={{fontSize: '35px'}}>
+                        <div style={{fontSize: '35px', color: '#000000'}}>
                             RANKING:
                             {rankList.map ((object,index) => (
                                 <div key={index}>
