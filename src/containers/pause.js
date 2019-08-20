@@ -21,7 +21,7 @@ const Pause = (props) => {
         )
     } else {
         return(
-            <Button disabled={false} onClick={props.onClick}
+            <Button disabled={!props.dealt} onClick={props.onClick}
                     style={{
                         backgroundColor: '#d03f46',
                         width: '100%',

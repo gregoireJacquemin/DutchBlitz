@@ -9,6 +9,7 @@ import {connect} from 'react-redux'
 import first from './first.svg'
 import second from './second.svg'
 import third from './third.svg'
+import poop from './poop.svg'
 import empty from '../../containers/pile/empty.svg'
 
 const Blitz = props => {
@@ -25,7 +26,7 @@ const Blitz = props => {
 
     rankList.sort((a,b) => (a.points > b.points) ? -1 : (a.points === b.points) ? ((a.name > b.name) ? 1 : -1) : 1)
 
-    const prize = [first, second, third, empty]
+    const prize = [first, second, third, poop]
 
     if (props.playerData.blitzPile.length === 1) playerBlitz = props.playerData.name
     else if (props.bot1Data.blitzPile.length === 1) playerBlitz = props.bot1Data.bot.name
@@ -54,7 +55,7 @@ const Blitz = props => {
                         <div style={{fontSize: '35px', color: '#000000'}}>
                             RANKING:
                             {rankList.map ((object,index) => (
-                                <div key={index}>
+                                <div key={index} style={{display: 'flex', alignItems: 'center'}}>
                                     <img src={prize[index]} className="App-logo" alt="" style={{height: '80px', width: '80px'}}/>
                                     {rankList[index].name}: {rankList[index].points} points
                                 </div>
